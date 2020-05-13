@@ -254,57 +254,6 @@
       </tags>
   </entry>
   <entry>
-    <title>搞机从入门到爆炸 ②初识刷机</title>
-    <url>/2020-04-29/38326.html</url>
-    <content><![CDATA[<p><img src="/fengimg/android.jpg" alt=""></p>
-<p>刷机:<br>是指通过非官方手段对手机固件就行更改，来让手机获得比以前更好的使用体验（或更差的使用体验）</p>
-<a id="more"></a>
-
-
-
-<p>先介绍下刷机是什么意思吧</p>
-<p>刷机，是指通过非官方手段对手机固件就行更改，来让手机获得比以前更好的使用体验（或更差的使用体验）<br>这一次通常在Android设备上使用比较广泛</p>
-<p>有些用户想要体验比官方系统更加流畅的操作或体验不同厂商的UI（比如小米刷Flyme，体验类原生、内测等等…），这个时候就需要刷机了</p>
-<p>那么刷机有那些方式呢?</p>
-<p>刷机分为卡刷和线刷</p>
-<p>卡刷是建立在Recovery的基础上的<br>手机通过进入Recovery模式来写入固件的都属于卡刷<br>adb sideload准确来说也属于卡刷</p>
-<p>线刷是基于Bootloader(或者叫Fastboot)，高通9008，高通9006，三星的下载模式(或者叫挖煤模式)，联发科的PreLoader模式等</p>
-<p>不同的模式有不同的特点</p>
-<p>在bootloader(或者叫fastboot)下可以使用ADB工具MiFlash，QPST刷入固件</p>
-<p>在高通9008，9006下可以使用MiFlash，QPST刷入固件</p>
-<p>在三星的下载模式(或者叫挖煤模式)下只能使用Odin刷入固件</p>
-<p>在联发科的Preloader模式下只能使用SP Flash Tool刷入固件</p>
-<p>卡刷用的Recovery分为两种<br>一是官方Recovery<br>通常官方的Recovery功能十分有限，只能清除数据，刷入官方提供的固件</p>
-<p>第二种是第三方Recovery</p>
-<p>第三方Recovery的功能就十分丰富了<br>比如TWRP<br>他可以进行文件管理，刷入第三方ROM，获取root，刷入增强补丁等等<br>第三方Recovery有CWM Recovery(ClockworkMod Recovery，TWRP(Team Win Recovery Project)等等</p>
-<p>第三方recovery官方可不会给你内置，你需要自己刷入<br>我们就得自己通过Bootloader刷入了</p>
-<p>线刷前面也介绍了那么多模式，现在我来详细说说他们</p>
-<p>Bootloader(或者叫Fastboot)<br>其实就是引导程序<br>手机启动的时候执行初始化，然后引导系统内核，直到系统启动。<br>在这个程序下我们也可以对手机进行完全的修改，比如系统，第一屏开机动画，Recovery等</p>
-<p>一般Bootloader都是被厂商锁定，这个时候我们就得想办法解锁了<br>这里给出几个品牌手机的解锁方法</p>
-<p>小米： <a href="http://www.miui.com/unlock/index.html" target="_blank" rel="noopener">http://www.miui.com/unlock/index.html</a> </p>
-<p>一加&amp;Google：adb工具执行 adb oem unlock 或 oem flashing unlock<br>OPPO： <a href="https://bbs.coloros.com/forum.php?mobile=2&amp;mod=viewthread&amp;tid=1498611" target="_blank" rel="noopener">https://bbs.coloros.com/forum.php?mobile=2&amp;mod=viewthread&amp;tid=1498611</a> </p>
-<p>索尼： <a href="https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/" target="_blank" rel="noopener">https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/</a> </p>
-<p>LG： <a href="http://developer.lge.com/resource/mobile/RetrieveBootloader.dev?categoryTypeCode=ANRS" target="_blank" rel="noopener">http://developer.lge.com/resource/mobile/RetrieveBootloader.dev?categoryTypeCode=ANRS</a> </p>
-<p>解锁后我们就可以在Bootloader中就行操作了</p>
-<p>这个模式下我们可以使用之前说的工具对手机进行修改</p>
-<p>高通900*<br>先说说9008吧<br>他是高通Soc特有的一个下载模式，最底层的联下载模式，当机器的Bootloader都无法进入的时候就会触发这一模式的开启</p>
-<p>连接到电脑后电脑会显示为9008，9007，900e的端口，如果在这个模式下都救不活你的手机，那这台手机多半是废了</p>
-<p>高通9006<br>跟9008差不多，但是在这个模式下电脑系统可以直接识别出手机的闪存，以便在电脑上使用其它工具就行修改，比如使用DiskGenius修改分区大小等等</p>
-<p>三星的下载模式(或者叫挖煤模式)<br>这是三星手机特有的一个模式<br>跟Bootloader差不多，但是只能使用Odin就行修改<br>刷入未经认证的文件需要解锁<br>解锁方法：手机上安装CROM服务这个APP，然后根据提示就行操作就行</p>
-<p>联发科的PreLoader模式<br>这是联发科Soc特有的一个模式<br>跟9008一样也是最底层的下载模式</p>
-]]></content>
-      <categories>
-        <category>搞机</category>
-        <category>教程</category>
-        <category>刷机</category>
-      </categories>
-      <tags>
-        <tag>搞机</tag>
-        <tag>教程</tag>
-        <tag>刷机</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>搞机从入门到爆炸 ③刷机包是如何炼成的</title>
     <url>/2020-05-13/2045.html</url>
     <content><![CDATA[<p>fengの风</p>
@@ -527,6 +476,57 @@
       <tags>
         <tag>生活</tag>
         <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搞机从入门到爆炸 ②初识刷机</title>
+    <url>/2020-04-29/38326.html</url>
+    <content><![CDATA[<p><img src="/fengimg/android.jpg" alt=""></p>
+<p>刷机:<br>是指通过非官方手段对手机固件就行更改，来让手机获得比以前更好的使用体验（或更差的使用体验）</p>
+<a id="more"></a>
+
+
+
+<p>先介绍下刷机是什么意思吧</p>
+<p>刷机，是指通过非官方手段对手机固件就行更改，来让手机获得比以前更好的使用体验（或更差的使用体验）<br>这一次通常在Android设备上使用比较广泛</p>
+<p>有些用户想要体验比官方系统更加流畅的操作或体验不同厂商的UI（比如小米刷Flyme，体验类原生、内测等等…），这个时候就需要刷机了</p>
+<p>那么刷机有那些方式呢?</p>
+<p>刷机分为卡刷和线刷</p>
+<p>卡刷是建立在Recovery的基础上的<br>手机通过进入Recovery模式来写入固件的都属于卡刷<br>adb sideload准确来说也属于卡刷</p>
+<p>线刷是基于Bootloader(或者叫Fastboot)，高通9008，高通9006，三星的下载模式(或者叫挖煤模式)，联发科的PreLoader模式等</p>
+<p>不同的模式有不同的特点</p>
+<p>在bootloader(或者叫fastboot)下可以使用ADB工具MiFlash，QPST刷入固件</p>
+<p>在高通9008，9006下可以使用MiFlash，QPST刷入固件</p>
+<p>在三星的下载模式(或者叫挖煤模式)下只能使用Odin刷入固件</p>
+<p>在联发科的Preloader模式下只能使用SP Flash Tool刷入固件</p>
+<p>卡刷用的Recovery分为两种<br>一是官方Recovery<br>通常官方的Recovery功能十分有限，只能清除数据，刷入官方提供的固件</p>
+<p>第二种是第三方Recovery</p>
+<p>第三方Recovery的功能就十分丰富了<br>比如TWRP<br>他可以进行文件管理，刷入第三方ROM，获取root，刷入增强补丁等等<br>第三方Recovery有CWM Recovery(ClockworkMod Recovery，TWRP(Team Win Recovery Project)等等</p>
+<p>第三方recovery官方可不会给你内置，你需要自己刷入<br>我们就得自己通过Bootloader刷入了</p>
+<p>线刷前面也介绍了那么多模式，现在我来详细说说他们</p>
+<p>Bootloader(或者叫Fastboot)<br>其实就是引导程序<br>手机启动的时候执行初始化，然后引导系统内核，直到系统启动。<br>在这个程序下我们也可以对手机进行完全的修改，比如系统，第一屏开机动画，Recovery等</p>
+<p>一般Bootloader都是被厂商锁定，这个时候我们就得想办法解锁了<br>这里给出几个品牌手机的解锁方法</p>
+<p>小米： <a href="http://www.miui.com/unlock/index.html" target="_blank" rel="noopener">http://www.miui.com/unlock/index.html</a> </p>
+<p>一加&amp;Google：adb工具执行 adb oem unlock 或 oem flashing unlock<br>OPPO： <a href="https://bbs.coloros.com/forum.php?mobile=2&amp;mod=viewthread&amp;tid=1498611" target="_blank" rel="noopener">https://bbs.coloros.com/forum.php?mobile=2&amp;mod=viewthread&amp;tid=1498611</a> </p>
+<p>索尼： <a href="https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/" target="_blank" rel="noopener">https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/</a> </p>
+<p>LG： <a href="http://developer.lge.com/resource/mobile/RetrieveBootloader.dev?categoryTypeCode=ANRS" target="_blank" rel="noopener">http://developer.lge.com/resource/mobile/RetrieveBootloader.dev?categoryTypeCode=ANRS</a> </p>
+<p>解锁后我们就可以在Bootloader中就行操作了</p>
+<p>这个模式下我们可以使用之前说的工具对手机进行修改</p>
+<p>高通900*<br>先说说9008吧<br>他是高通Soc特有的一个下载模式，最底层的联下载模式，当机器的Bootloader都无法进入的时候就会触发这一模式的开启</p>
+<p>连接到电脑后电脑会显示为9008，9007，900e的端口，如果在这个模式下都救不活你的手机，那这台手机多半是废了</p>
+<p>高通9006<br>跟9008差不多，但是在这个模式下电脑系统可以直接识别出手机的闪存，以便在电脑上使用其它工具就行修改，比如使用DiskGenius修改分区大小等等</p>
+<p>三星的下载模式(或者叫挖煤模式)<br>这是三星手机特有的一个模式<br>跟Bootloader差不多，但是只能使用Odin就行修改<br>刷入未经认证的文件需要解锁<br>解锁方法：手机上安装CROM服务这个APP，然后根据提示就行操作就行</p>
+<p>联发科的PreLoader模式<br>这是联发科Soc特有的一个模式<br>跟9008一样也是最底层的下载模式</p>
+]]></content>
+      <categories>
+        <category>搞机</category>
+        <category>教程</category>
+        <category>刷机</category>
+      </categories>
+      <tags>
+        <tag>搞机</tag>
+        <tag>教程</tag>
+        <tag>刷机</tag>
       </tags>
   </entry>
 </search>
