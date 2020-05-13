@@ -1,0 +1,41 @@
+---
+layout: links     # 必须
+title: 友人帐   # 可选，这是友链页的标题
+links:
+  - group: feng如风
+    icon: fas fa-user-tie
+    desc: feng如风博客本客
+    items:
+    - name:  fengの风   # 博客名
+      avatar: http://binmt.cn/images/icon2.png  # 头像链接
+      url:   http://binmt.cn/   # 博客链接
+      backgroundColor: '#ff2e97ff' # 卡片背景颜色
+      textColor: '#fff'  # 卡片文字颜色
+      tags: [风, feng如风]    # 标签
+      desc: 本博客～feng如风
+
+     
+  - group: 一番目
+    icon: fas fa-user-tie
+    desc: 和泉式部
+    items:
+    - name:  一番目   # 博客名
+      avatar: https://cdn.v2ex.com/gravatar/f8c830aa256ccd86785ee3e375dc2790.png  # 头像链接
+      url: https://www3.ichi.cc/  # 博客链接
+      backgroundColor: '#ffa2c5ff' # 卡片背景颜色
+      textColor: '#fff'  # 卡片文字颜色
+      tags: ['@和泉式部', '@川端康成']    # 标签
+      desc:  Quro Cyan(Na)のブログ
+      
+      社畜，死宅，白色爱好者
+---
+
+
+
+
+<!-- more -->
+
+
+< br >
+
+留友链请留言嗷！
