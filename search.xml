@@ -1,6 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>搞机从入门到爆炸 ②初识刷机</title>
+    <url>/2020-04-29/38326.html</url>
+    <content><![CDATA[<p><img src="/fengimg/android.jpg" alt=""></p>
+<p>刷机:<br>是指通过非官方手段对手机固件就行更改，来让手机获得比以前更好的使用体验（或更差的使用体验）</p>
+<a id="more"></a>
+
+
+
+<p>先介绍下刷机是什么意思吧</p>
+<p>刷机，是指通过非官方手段对手机固件就行更改，来让手机获得比以前更好的使用体验（或更差的使用体验）<br>这一次通常在Android设备上使用比较广泛</p>
+<p>有些用户想要体验比官方系统更加流畅的操作或体验不同厂商的UI（比如小米刷Flyme，体验类原生、内测等等…），这个时候就需要刷机了</p>
+<p>那么刷机有那些方式呢?</p>
+<p>刷机分为卡刷和线刷</p>
+<p>卡刷是建立在Recovery的基础上的<br>手机通过进入Recovery模式来写入固件的都属于卡刷<br>adb sideload准确来说也属于卡刷</p>
+<p>线刷是基于Bootloader(或者叫Fastboot)，高通9008，高通9006，三星的下载模式(或者叫挖煤模式)，联发科的PreLoader模式等</p>
+<p>不同的模式有不同的特点</p>
+<p>在bootloader(或者叫fastboot)下可以使用ADB工具MiFlash，QPST刷入固件</p>
+<p>在高通9008，9006下可以使用MiFlash，QPST刷入固件</p>
+<p>在三星的下载模式(或者叫挖煤模式)下只能使用Odin刷入固件</p>
+<p>在联发科的Preloader模式下只能使用SP Flash Tool刷入固件</p>
+<p>卡刷用的Recovery分为两种<br>一是官方Recovery<br>通常官方的Recovery功能十分有限，只能清除数据，刷入官方提供的固件</p>
+<p>第二种是第三方Recovery</p>
+<p>第三方Recovery的功能就十分丰富了<br>比如TWRP<br>他可以进行文件管理，刷入第三方ROM，获取root，刷入增强补丁等等<br>第三方Recovery有CWM Recovery(ClockworkMod Recovery，TWRP(Team Win Recovery Project)等等</p>
+<p>第三方recovery官方可不会给你内置，你需要自己刷入<br>我们就得自己通过Bootloader刷入了</p>
+<p>线刷前面也介绍了那么多模式，现在我来详细说说他们</p>
+<p>Bootloader(或者叫Fastboot)<br>其实就是引导程序<br>手机启动的时候执行初始化，然后引导系统内核，直到系统启动。<br>在这个程序下我们也可以对手机进行完全的修改，比如系统，第一屏开机动画，Recovery等</p>
+<p>一般Bootloader都是被厂商锁定，这个时候我们就得想办法解锁了<br>这里给出几个品牌手机的解锁方法</p>
+<p>小米： <a href="http://www.miui.com/unlock/index.html" target="_blank" rel="noopener">http://www.miui.com/unlock/index.html</a> </p>
+<p>一加&amp;Google：adb工具执行 adb oem unlock 或 oem flashing unlock<br>OPPO： <a href="https://bbs.coloros.com/forum.php?mobile=2&amp;mod=viewthread&amp;tid=1498611" target="_blank" rel="noopener">https://bbs.coloros.com/forum.php?mobile=2&amp;mod=viewthread&amp;tid=1498611</a> </p>
+<p>索尼： <a href="https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/" target="_blank" rel="noopener">https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/</a> </p>
+<p>LG： <a href="http://developer.lge.com/resource/mobile/RetrieveBootloader.dev?categoryTypeCode=ANRS" target="_blank" rel="noopener">http://developer.lge.com/resource/mobile/RetrieveBootloader.dev?categoryTypeCode=ANRS</a> </p>
+<p>解锁后我们就可以在Bootloader中就行操作了</p>
+<p>这个模式下我们可以使用之前说的工具对手机进行修改</p>
+<p>高通900*<br>先说说9008吧<br>他是高通Soc特有的一个下载模式，最底层的联下载模式，当机器的Bootloader都无法进入的时候就会触发这一模式的开启</p>
+<p>连接到电脑后电脑会显示为9008，9007，900e的端口，如果在这个模式下都救不活你的手机，那这台手机多半是废了</p>
+<p>高通9006<br>跟9008差不多，但是在这个模式下电脑系统可以直接识别出手机的闪存，以便在电脑上使用其它工具就行修改，比如使用DiskGenius修改分区大小等等</p>
+<p>三星的下载模式(或者叫挖煤模式)<br>这是三星手机特有的一个模式<br>跟Bootloader差不多，但是只能使用Odin就行修改<br>刷入未经认证的文件需要解锁<br>解锁方法：手机上安装CROM服务这个APP，然后根据提示就行操作就行</p>
+<p>联发科的PreLoader模式<br>这是联发科Soc特有的一个模式<br>跟9008一样也是最底层的下载模式</p>
+]]></content>
+      <categories>
+        <category>搞机</category>
+        <category>教程</category>
+        <category>刷机</category>
+      </categories>
+      <tags>
+        <tag>搞机</tag>
+        <tag>教程</tag>
+        <tag>刷机</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>搞机从入门到爆炸 搞机是什么</title>
     <url>/2020-04-28/39061.html</url>
     <content><![CDATA[<p>通过修改电子产品的内置软件或硬件的方式来使电子产品达到更符合自己要求的一种行为。</p>
@@ -35,28 +86,6 @@
       <tags>
         <tag>搞机</tag>
         <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2020.2.16日小记</title>
-    <url>/2020-02-21/3803.html</url>
-    <content><![CDATA[<p>fengの风<br>时隔多年我又从新拾起了博客，回望多年，似乎没有更大的改变，我似乎并没有前进太多。</p>
-<a id="more"></a>
-
-<p>时隔多年我又从新拾起了博客，回望多年，似乎没有更大的改变，我似乎并没有前进太多。</p>
-<p>工资还是过去那样，更没有可值得称道的技术。<br>多年钱，我是一个懵懂的少年，沉迷网络，爱好破解，更是为了网络上有一点粉丝沾沾自喜。回首往事，终究何其可笑，可悲！<br>此后我开始接触diarduan,更面对了更黑暗的东西，我开始知道，有些人没有任何下限，为了钱，哪怕是触犯法律。<br>我依旧坚持免费分享，因为我怕自己变成那种毫无下限的人。<br>此之前，由于某些变故，我存款直接成为个位数，生活开始拮据，于是拒绝了游戏消费，以前每月买的皮肤不买了，需要氪金的游戏不氪了。渐渐的，游戏玩的少了，此后我便很少玩游戏。发现生活更变得有趣了。只是关于游戏的话题，我便少了许多谈资。<br>17年我在广州做运营，运营的东西学不进去，在这期间反到对前端起了兴趣，花了3天学习了html5，又开始接触js与css。看到教程没啥，反倒是我看到很多网络源码里大量毫无规律的css与js后，我便栽在上面了。<br>17年中我还接触cooapk，我开始又对软件开发起了兴趣，开始同行aide学习java，但是并没有什么卵用，java虽然相对于c,c++来说简单，但是我学习真的很吃力，学了一个月后便放弃了，买了一本java的书，便也留在那里吃灰。<br>然后我又看到了lua，准确的说是androlua+<br>此前我接触diarduan有过lua的基础，入门很快，发现真的很简单，跟着教程走就能做出一个很好的软件，此开始后用lua做了3-4个软件。只是后来，缺乏维护，我的软件对现在的手机都不兼容了。</p>
-<p>多年来，我结识了许多朋友。<br>他们可能是开发者，可能是普通用户，此前我们有很多话说，有很多讨论的东西。<br>可是，在了以后，时间越长，交流也逐渐变少，渐渐地变成了好友列表中一个永远不会震动的头像。<br>可能。是我三分热度吧！<br>另外一些朋友也离我远去，最后成为了各个大佬，把我丢在了后头。</p>
-<p>我不禁思考一个问题：<br>我真的适合编程吗？<br>我没有答案！</p>
-<p>做事，难；做人，很难。<br>我只有脚踏实地，真正为用户所着想，才能把一款软件做大，做好。<br>我只有抛弃恶俗，摒弃其他繁杂思想，才能成大家所爱的人，成人。</p>
-<p>这篇文章，写给我自己，也写给那些离我远去的朋友们。<br>向离开我远去的朋友们表达我最真诚的歉意，向我所有的朋友们表达我最真诚的感谢！<br>感谢你们陪伴着我</p>
-]]></content>
-      <categories>
-        <category>生活</category>
-        <category>记录</category>
-      </categories>
-      <tags>
-        <tag>生活</tag>
-        <tag>记录</tag>
       </tags>
   </entry>
   <entry>
@@ -251,57 +280,6 @@
       <tags>
         <tag>生活</tag>
         <tag>记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>搞机从入门到爆炸 ②初识刷机</title>
-    <url>/2020-04-29/38326.html</url>
-    <content><![CDATA[<p><img src="/fengimg/android.jpg" alt=""></p>
-<p>刷机:<br>是指通过非官方手段对手机固件就行更改，来让手机获得比以前更好的使用体验（或更差的使用体验）</p>
-<a id="more"></a>
-
-
-
-<p>先介绍下刷机是什么意思吧</p>
-<p>刷机，是指通过非官方手段对手机固件就行更改，来让手机获得比以前更好的使用体验（或更差的使用体验）<br>这一次通常在Android设备上使用比较广泛</p>
-<p>有些用户想要体验比官方系统更加流畅的操作或体验不同厂商的UI（比如小米刷Flyme，体验类原生、内测等等…），这个时候就需要刷机了</p>
-<p>那么刷机有那些方式呢?</p>
-<p>刷机分为卡刷和线刷</p>
-<p>卡刷是建立在Recovery的基础上的<br>手机通过进入Recovery模式来写入固件的都属于卡刷<br>adb sideload准确来说也属于卡刷</p>
-<p>线刷是基于Bootloader(或者叫Fastboot)，高通9008，高通9006，三星的下载模式(或者叫挖煤模式)，联发科的PreLoader模式等</p>
-<p>不同的模式有不同的特点</p>
-<p>在bootloader(或者叫fastboot)下可以使用ADB工具MiFlash，QPST刷入固件</p>
-<p>在高通9008，9006下可以使用MiFlash，QPST刷入固件</p>
-<p>在三星的下载模式(或者叫挖煤模式)下只能使用Odin刷入固件</p>
-<p>在联发科的Preloader模式下只能使用SP Flash Tool刷入固件</p>
-<p>卡刷用的Recovery分为两种<br>一是官方Recovery<br>通常官方的Recovery功能十分有限，只能清除数据，刷入官方提供的固件</p>
-<p>第二种是第三方Recovery</p>
-<p>第三方Recovery的功能就十分丰富了<br>比如TWRP<br>他可以进行文件管理，刷入第三方ROM，获取root，刷入增强补丁等等<br>第三方Recovery有CWM Recovery(ClockworkMod Recovery，TWRP(Team Win Recovery Project)等等</p>
-<p>第三方recovery官方可不会给你内置，你需要自己刷入<br>我们就得自己通过Bootloader刷入了</p>
-<p>线刷前面也介绍了那么多模式，现在我来详细说说他们</p>
-<p>Bootloader(或者叫Fastboot)<br>其实就是引导程序<br>手机启动的时候执行初始化，然后引导系统内核，直到系统启动。<br>在这个程序下我们也可以对手机进行完全的修改，比如系统，第一屏开机动画，Recovery等</p>
-<p>一般Bootloader都是被厂商锁定，这个时候我们就得想办法解锁了<br>这里给出几个品牌手机的解锁方法</p>
-<p>小米： <a href="http://www.miui.com/unlock/index.html" target="_blank" rel="noopener">http://www.miui.com/unlock/index.html</a> </p>
-<p>一加&amp;Google：adb工具执行 adb oem unlock 或 oem flashing unlock<br>OPPO： <a href="https://bbs.coloros.com/forum.php?mobile=2&amp;mod=viewthread&amp;tid=1498611" target="_blank" rel="noopener">https://bbs.coloros.com/forum.php?mobile=2&amp;mod=viewthread&amp;tid=1498611</a> </p>
-<p>索尼： <a href="https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/" target="_blank" rel="noopener">https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/</a> </p>
-<p>LG： <a href="http://developer.lge.com/resource/mobile/RetrieveBootloader.dev?categoryTypeCode=ANRS" target="_blank" rel="noopener">http://developer.lge.com/resource/mobile/RetrieveBootloader.dev?categoryTypeCode=ANRS</a> </p>
-<p>解锁后我们就可以在Bootloader中就行操作了</p>
-<p>这个模式下我们可以使用之前说的工具对手机进行修改</p>
-<p>高通900*<br>先说说9008吧<br>他是高通Soc特有的一个下载模式，最底层的联下载模式，当机器的Bootloader都无法进入的时候就会触发这一模式的开启</p>
-<p>连接到电脑后电脑会显示为9008，9007，900e的端口，如果在这个模式下都救不活你的手机，那这台手机多半是废了</p>
-<p>高通9006<br>跟9008差不多，但是在这个模式下电脑系统可以直接识别出手机的闪存，以便在电脑上使用其它工具就行修改，比如使用DiskGenius修改分区大小等等</p>
-<p>三星的下载模式(或者叫挖煤模式)<br>这是三星手机特有的一个模式<br>跟Bootloader差不多，但是只能使用Odin就行修改<br>刷入未经认证的文件需要解锁<br>解锁方法：手机上安装CROM服务这个APP，然后根据提示就行操作就行</p>
-<p>联发科的PreLoader模式<br>这是联发科Soc特有的一个模式<br>跟9008一样也是最底层的下载模式</p>
-]]></content>
-      <categories>
-        <category>搞机</category>
-        <category>教程</category>
-        <category>刷机</category>
-      </categories>
-      <tags>
-        <tag>搞机</tag>
-        <tag>教程</tag>
-        <tag>刷机</tag>
       </tags>
   </entry>
   <entry>
@@ -519,6 +497,28 @@
 <p>等伸个懒腰时，却已忘了一大半。</p>
 <p>那时的少年，</p>
 <p>至今如何。</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+        <category>记录</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+        <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2020.2.16日小记</title>
+    <url>/2020-02-21/3803.html</url>
+    <content><![CDATA[<p>fengの风<br>时隔多年我又从新拾起了博客，回望多年，似乎没有更大的改变，我似乎并没有前进太多。</p>
+<a id="more"></a>
+
+<p>时隔多年我又从新拾起了博客，回望多年，似乎没有更大的改变，我似乎并没有前进太多。</p>
+<p>工资还是过去那样，更没有可值得称道的技术。<br>多年钱，我是一个懵懂的少年，沉迷网络，爱好破解，更是为了网络上有一点粉丝沾沾自喜。回首往事，终究何其可笑，可悲！<br>此后我开始接触diarduan,更面对了更黑暗的东西，我开始知道，有些人没有任何下限，为了钱，哪怕是触犯法律。<br>我依旧坚持免费分享，因为我怕自己变成那种毫无下限的人。<br>此之前，由于某些变故，我存款直接成为个位数，生活开始拮据，于是拒绝了游戏消费，以前每月买的皮肤不买了，需要氪金的游戏不氪了。渐渐的，游戏玩的少了，此后我便很少玩游戏。发现生活更变得有趣了。只是关于游戏的话题，我便少了许多谈资。<br>17年我在广州做运营，运营的东西学不进去，在这期间反到对前端起了兴趣，花了3天学习了html5，又开始接触js与css。看到教程没啥，反倒是我看到很多网络源码里大量毫无规律的css与js后，我便栽在上面了。<br>17年中我还接触cooapk，我开始又对软件开发起了兴趣，开始同行aide学习java，但是并没有什么卵用，java虽然相对于c,c++来说简单，但是我学习真的很吃力，学了一个月后便放弃了，买了一本java的书，便也留在那里吃灰。<br>然后我又看到了lua，准确的说是androlua+<br>此前我接触diarduan有过lua的基础，入门很快，发现真的很简单，跟着教程走就能做出一个很好的软件，此开始后用lua做了3-4个软件。只是后来，缺乏维护，我的软件对现在的手机都不兼容了。</p>
+<p>多年来，我结识了许多朋友。<br>他们可能是开发者，可能是普通用户，此前我们有很多话说，有很多讨论的东西。<br>可是，在了以后，时间越长，交流也逐渐变少，渐渐地变成了好友列表中一个永远不会震动的头像。<br>可能。是我三分热度吧！<br>另外一些朋友也离我远去，最后成为了各个大佬，把我丢在了后头。</p>
+<p>我不禁思考一个问题：<br>我真的适合编程吗？<br>我没有答案！</p>
+<p>做事，难；做人，很难。<br>我只有脚踏实地，真正为用户所着想，才能把一款软件做大，做好。<br>我只有抛弃恶俗，摒弃其他繁杂思想，才能成大家所爱的人，成人。</p>
+<p>这篇文章，写给我自己，也写给那些离我远去的朋友们。<br>向离开我远去的朋友们表达我最真诚的歉意，向我所有的朋友们表达我最真诚的感谢！<br>感谢你们陪伴着我</p>
 ]]></content>
       <categories>
         <category>生活</category>
