@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://binmt.cn/friends/</loc>
+    
+    <lastmod>2020-05-18T16:19:36.674Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://binmt.cn/2020-05-18/5782df52.html</loc>
     
     <lastmod>2020-05-18T05:28:12.939Z</lastmod>
@@ -23,9 +30,9 @@
   </url>
   
   <url>
-    <loc>http://binmt.cn/friends/</loc>
+    <loc>http://binmt.cn/2020-01-20/55491.html</loc>
     
-    <lastmod>2020-05-12T11:11:14.423Z</lastmod>
+    <lastmod>2020-05-09T08:43:44.827Z</lastmod>
     
   </url>
   
@@ -44,21 +51,14 @@
   </url>
   
   <url>
-    <loc>http://binmt.cn/2020-04-28/39061.html</loc>
-    
-    <lastmod>2020-05-09T08:43:44.827Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://binmt.cn/2020-01-20/55491.html</loc>
-    
-    <lastmod>2020-05-09T08:43:44.827Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://binmt.cn/2020-05-02/24415.html</loc>
+    
+    <lastmod>2020-05-09T08:43:44.827Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://binmt.cn/2020-04-28/39061.html</loc>
     
     <lastmod>2020-05-09T08:43:44.827Z</lastmod>
     
