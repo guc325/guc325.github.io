@@ -26,7 +26,18 @@ links:
       textColor: '#fff'  # 卡片文字颜色
       tags: ['@和泉式部', '@川端康成']    # 标签
       desc:  Quro Cyan(Na)のブログ            社畜，死宅，白色爱好者
----
+      
+      
+  - group: Jkkoi
+    items:
+    - name:  一番目   # 博客名
+      avatar: https://jkkoi.top/images/custom/avatar.jpg # 头像链接
+      url: https://jkkoi.top  # 博客链接
+      backgroundColor: '#ffa2c5ff' # 卡片背景颜色
+      textColor: '#fff'  # 卡片文字颜色
+      tags: ['@Jkkoi', '@川端康成']    # 标签
+      desc: 一条咸鱼
+
 
 
 
