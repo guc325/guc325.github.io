@@ -70,6 +70,57 @@
       </tags>
   </entry>
   <entry>
+    <title>搞机从入门到爆炸 ②初识刷机</title>
+    <url>/2020-04-29/38326.html</url>
+    <content><![CDATA[<p><img src="/fengimg/android.jpg" alt=""></p>
+<p>刷机:<br>是指通过非官方手段对手机固件就行更改，来让手机获得比以前更好的使用体验（或更差的使用体验）</p>
+<a id="more"></a>
+
+
+
+<p>先介绍下刷机是什么意思吧</p>
+<p>刷机，是指通过非官方手段对手机固件就行更改，来让手机获得比以前更好的使用体验（或更差的使用体验）<br>这一次通常在Android设备上使用比较广泛</p>
+<p>有些用户想要体验比官方系统更加流畅的操作或体验不同厂商的UI（比如小米刷Flyme，体验类原生、内测等等…），这个时候就需要刷机了</p>
+<p>那么刷机有那些方式呢?</p>
+<p>刷机分为卡刷和线刷</p>
+<p>卡刷是建立在Recovery的基础上的<br>手机通过进入Recovery模式来写入固件的都属于卡刷<br>adb sideload准确来说也属于卡刷</p>
+<p>线刷是基于Bootloader(或者叫Fastboot)，高通9008，高通9006，三星的下载模式(或者叫挖煤模式)，联发科的PreLoader模式等</p>
+<p>不同的模式有不同的特点</p>
+<p>在bootloader(或者叫fastboot)下可以使用ADB工具MiFlash，QPST刷入固件</p>
+<p>在高通9008，9006下可以使用MiFlash，QPST刷入固件</p>
+<p>在三星的下载模式(或者叫挖煤模式)下只能使用Odin刷入固件</p>
+<p>在联发科的Preloader模式下只能使用SP Flash Tool刷入固件</p>
+<p>卡刷用的Recovery分为两种<br>一是官方Recovery<br>通常官方的Recovery功能十分有限，只能清除数据，刷入官方提供的固件</p>
+<p>第二种是第三方Recovery</p>
+<p>第三方Recovery的功能就十分丰富了<br>比如TWRP<br>他可以进行文件管理，刷入第三方ROM，获取root，刷入增强补丁等等<br>第三方Recovery有CWM Recovery(ClockworkMod Recovery，TWRP(Team Win Recovery Project)等等</p>
+<p>第三方recovery官方可不会给你内置，你需要自己刷入<br>我们就得自己通过Bootloader刷入了</p>
+<p>线刷前面也介绍了那么多模式，现在我来详细说说他们</p>
+<p>Bootloader(或者叫Fastboot)<br>其实就是引导程序<br>手机启动的时候执行初始化，然后引导系统内核，直到系统启动。<br>在这个程序下我们也可以对手机进行完全的修改，比如系统，第一屏开机动画，Recovery等</p>
+<p>一般Bootloader都是被厂商锁定，这个时候我们就得想办法解锁了<br>这里给出几个品牌手机的解锁方法</p>
+<p>小米： <a href="http://www.miui.com/unlock/index.html" target="_blank" rel="noopener">http://www.miui.com/unlock/index.html</a> </p>
+<p>一加&amp;Google：adb工具执行 adb oem unlock 或 oem flashing unlock<br>OPPO： <a href="https://bbs.coloros.com/forum.php?mobile=2&amp;mod=viewthread&amp;tid=1498611" target="_blank" rel="noopener">https://bbs.coloros.com/forum.php?mobile=2&amp;mod=viewthread&amp;tid=1498611</a> </p>
+<p>索尼： <a href="https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/" target="_blank" rel="noopener">https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/</a> </p>
+<p>LG： <a href="http://developer.lge.com/resource/mobile/RetrieveBootloader.dev?categoryTypeCode=ANRS" target="_blank" rel="noopener">http://developer.lge.com/resource/mobile/RetrieveBootloader.dev?categoryTypeCode=ANRS</a> </p>
+<p>解锁后我们就可以在Bootloader中就行操作了</p>
+<p>这个模式下我们可以使用之前说的工具对手机进行修改</p>
+<p>高通900*<br>先说说9008吧<br>他是高通Soc特有的一个下载模式，最底层的联下载模式，当机器的Bootloader都无法进入的时候就会触发这一模式的开启</p>
+<p>连接到电脑后电脑会显示为9008，9007，900e的端口，如果在这个模式下都救不活你的手机，那这台手机多半是废了</p>
+<p>高通9006<br>跟9008差不多，但是在这个模式下电脑系统可以直接识别出手机的闪存，以便在电脑上使用其它工具就行修改，比如使用DiskGenius修改分区大小等等</p>
+<p>三星的下载模式(或者叫挖煤模式)<br>这是三星手机特有的一个模式<br>跟Bootloader差不多，但是只能使用Odin就行修改<br>刷入未经认证的文件需要解锁<br>解锁方法：手机上安装CROM服务这个APP，然后根据提示就行操作就行</p>
+<p>联发科的PreLoader模式<br>这是联发科Soc特有的一个模式<br>跟9008一样也是最底层的下载模式</p>
+]]></content>
+      <categories>
+        <category>搞机</category>
+        <category>教程</category>
+        <category>刷机</category>
+      </categories>
+      <tags>
+        <tag>搞机</tag>
+        <tag>教程</tag>
+        <tag>刷机</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>我不想就这么算了，我想努力试试看</title>
     <url>/2020-01-20/55491.html</url>
     <content><![CDATA[<p>fengの风<br>“我不想就这么算了，我想努力试试看。”</p>
@@ -261,94 +312,6 @@
       <tags>
         <tag>生活</tag>
         <tag>记录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>搞机从入门到爆炸 搞机是什么</title>
-    <url>/2020-04-28/39061.html</url>
-    <content><![CDATA[<p>通过修改电子产品的内置软件或硬件的方式来使电子产品达到更符合自己要求的一种行为。</p>
-<a id="more"></a>
-
-
-
-
-
-<p>但是很少有人写一些关于如何理性的搞机，以及搞机的原则。</p>
-<p> 我将通过一系列教程带大家踏入搞机的世界</p>
-<p> <img src="/fengimg/zjz.gif" alt=""></p>
-<p>什么是<strong>搞机</strong>？它有什么用？</p>
-<p>搞机就是指通过修改电子产品的内置软件或硬件的方式来使电子产品达到更符合自己要求的一种行为。</p>
-<p>分为软<strong>搞机</strong>与<strong>硬搞机</strong>!</p>
-<p> 举个例子，我们俗称的刷机，就是一种软搞机，也就是修改软件的搞机。这种搞机的好处是可以迁移，也就是说你可以很方便的在网上分享你的成果。</p>
-<p> 一般情况下，软搞机是不需要什么成本的，唯一的成本就是时间以及精力。所以一般的软搞机也是<strong>非商业性的</strong>。</p>
-<p> <img src="/fengimg/wlgxd.jpg" alt=""></p>
-<p>而改内存改电池一类的操作是硬搞机，也就是修改硬件的搞机。这种搞机的特点是对搞基者的技术要求更高，就算是给你全套材料和技术资料你也不一定能复现。一般情况下硬搞机是需要一些成本的。因为稍有不慎就会导致整个硬件不可逆的损坏，所以硬搞机的人相对较少，而且也需要大量时间和精力。 做这种搞机的人通常以盈利为目的，因为前期投入高，所以会的人较少。</p>
-<p>道理我都懂，现在我有一台三星S5,想改一下我的系统，怎么搞？要求不高，吃鸡不卡就行。</p>
-<p>搞机的作用没有那么大。它只能让原本很差的性能勉强能用，让原来勉强能用的货色变得稍微好一点。 搞机可以提高机器的下限，却没法提高机器的上限。上限取决于你硬件的性能。比如你再怎么优化也不可能让骁龙810 2600Mah的手机获得10个小时的亮屏，或者让骁龙210这种级别的手机流畅吃鸡。你这台三星S5已经是很早的手机了，如果你要流畅吃鸡的话，你需要更换一台手机。</p>
-<p>我有一台小米5，我想刷个系统，有什么注意事项吗？</p>
-<p>搞机之前请务必理性一些，千万不要脑子一热就刷机。刷完发现还不如原来的，耽误你的时间又浪费你的精力。所以你搞机之前请务必准备好各种应急预案，比如成砖怎么救，还有备份好你的资料 包括程序等。 这点很重要，因为大部分刷机过程都需要清除所有程序。也就是说，如果你无法确认的话那就提前准备好吧。</p>
-<p>woc，我成砖了，怎么办？</p>
-<p>这种情况务必不要慌张，请按照之前做好的应急预案去解决问题，如果你没做好应急预案的话那就不要怨天尤人，没有人强迫你。如果你真的没有做好应急预案的话，那么你要做的是休息一下，放平心态，然后去心平气和的找资料或者提问，记得不要相信<strong>奸商</strong>，也不要信论坛的什么qq付费救砖。大概率是骗子。</p>
-<p><img src="/fengimg/bdb.gif" alt=""></p>
-]]></content>
-      <categories>
-        <category>搞机</category>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>搞机</tag>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>搞机从入门到爆炸 ②初识刷机</title>
-    <url>/2020-04-29/38326.html</url>
-    <content><![CDATA[<p><img src="/fengimg/android.jpg" alt=""></p>
-<p>刷机:<br>是指通过非官方手段对手机固件就行更改，来让手机获得比以前更好的使用体验（或更差的使用体验）</p>
-<a id="more"></a>
-
-
-
-<p>先介绍下刷机是什么意思吧</p>
-<p>刷机，是指通过非官方手段对手机固件就行更改，来让手机获得比以前更好的使用体验（或更差的使用体验）<br>这一次通常在Android设备上使用比较广泛</p>
-<p>有些用户想要体验比官方系统更加流畅的操作或体验不同厂商的UI（比如小米刷Flyme，体验类原生、内测等等…），这个时候就需要刷机了</p>
-<p>那么刷机有那些方式呢?</p>
-<p>刷机分为卡刷和线刷</p>
-<p>卡刷是建立在Recovery的基础上的<br>手机通过进入Recovery模式来写入固件的都属于卡刷<br>adb sideload准确来说也属于卡刷</p>
-<p>线刷是基于Bootloader(或者叫Fastboot)，高通9008，高通9006，三星的下载模式(或者叫挖煤模式)，联发科的PreLoader模式等</p>
-<p>不同的模式有不同的特点</p>
-<p>在bootloader(或者叫fastboot)下可以使用ADB工具MiFlash，QPST刷入固件</p>
-<p>在高通9008，9006下可以使用MiFlash，QPST刷入固件</p>
-<p>在三星的下载模式(或者叫挖煤模式)下只能使用Odin刷入固件</p>
-<p>在联发科的Preloader模式下只能使用SP Flash Tool刷入固件</p>
-<p>卡刷用的Recovery分为两种<br>一是官方Recovery<br>通常官方的Recovery功能十分有限，只能清除数据，刷入官方提供的固件</p>
-<p>第二种是第三方Recovery</p>
-<p>第三方Recovery的功能就十分丰富了<br>比如TWRP<br>他可以进行文件管理，刷入第三方ROM，获取root，刷入增强补丁等等<br>第三方Recovery有CWM Recovery(ClockworkMod Recovery，TWRP(Team Win Recovery Project)等等</p>
-<p>第三方recovery官方可不会给你内置，你需要自己刷入<br>我们就得自己通过Bootloader刷入了</p>
-<p>线刷前面也介绍了那么多模式，现在我来详细说说他们</p>
-<p>Bootloader(或者叫Fastboot)<br>其实就是引导程序<br>手机启动的时候执行初始化，然后引导系统内核，直到系统启动。<br>在这个程序下我们也可以对手机进行完全的修改，比如系统，第一屏开机动画，Recovery等</p>
-<p>一般Bootloader都是被厂商锁定，这个时候我们就得想办法解锁了<br>这里给出几个品牌手机的解锁方法</p>
-<p>小米： <a href="http://www.miui.com/unlock/index.html" target="_blank" rel="noopener">http://www.miui.com/unlock/index.html</a> </p>
-<p>一加&amp;Google：adb工具执行 adb oem unlock 或 oem flashing unlock<br>OPPO： <a href="https://bbs.coloros.com/forum.php?mobile=2&amp;mod=viewthread&amp;tid=1498611" target="_blank" rel="noopener">https://bbs.coloros.com/forum.php?mobile=2&amp;mod=viewthread&amp;tid=1498611</a> </p>
-<p>索尼： <a href="https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/" target="_blank" rel="noopener">https://developer.sony.com/develop/open-devices/get-started/unlock-bootloader/</a> </p>
-<p>LG： <a href="http://developer.lge.com/resource/mobile/RetrieveBootloader.dev?categoryTypeCode=ANRS" target="_blank" rel="noopener">http://developer.lge.com/resource/mobile/RetrieveBootloader.dev?categoryTypeCode=ANRS</a> </p>
-<p>解锁后我们就可以在Bootloader中就行操作了</p>
-<p>这个模式下我们可以使用之前说的工具对手机进行修改</p>
-<p>高通900*<br>先说说9008吧<br>他是高通Soc特有的一个下载模式，最底层的联下载模式，当机器的Bootloader都无法进入的时候就会触发这一模式的开启</p>
-<p>连接到电脑后电脑会显示为9008，9007，900e的端口，如果在这个模式下都救不活你的手机，那这台手机多半是废了</p>
-<p>高通9006<br>跟9008差不多，但是在这个模式下电脑系统可以直接识别出手机的闪存，以便在电脑上使用其它工具就行修改，比如使用DiskGenius修改分区大小等等</p>
-<p>三星的下载模式(或者叫挖煤模式)<br>这是三星手机特有的一个模式<br>跟Bootloader差不多，但是只能使用Odin就行修改<br>刷入未经认证的文件需要解锁<br>解锁方法：手机上安装CROM服务这个APP，然后根据提示就行操作就行</p>
-<p>联发科的PreLoader模式<br>这是联发科Soc特有的一个模式<br>跟9008一样也是最底层的下载模式</p>
-]]></content>
-      <categories>
-        <category>搞机</category>
-        <category>教程</category>
-        <category>刷机</category>
-      </categories>
-      <tags>
-        <tag>搞机</tag>
-        <tag>教程</tag>
-        <tag>刷机</tag>
       </tags>
   </entry>
   <entry>
@@ -574,6 +537,43 @@
       <tags>
         <tag>生活</tag>
         <tag>记录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搞机从入门到爆炸 搞机是什么</title>
+    <url>/2020-04-28/39061.html</url>
+    <content><![CDATA[<p>通过修改电子产品的内置软件或硬件的方式来使电子产品达到更符合自己要求的一种行为。</p>
+<a id="more"></a>
+
+
+
+
+
+<p>但是很少有人写一些关于如何理性的搞机，以及搞机的原则。</p>
+<p> 我将通过一系列教程带大家踏入搞机的世界</p>
+<p> <img src="/fengimg/zjz.gif" alt=""></p>
+<p>什么是<strong>搞机</strong>？它有什么用？</p>
+<p>搞机就是指通过修改电子产品的内置软件或硬件的方式来使电子产品达到更符合自己要求的一种行为。</p>
+<p>分为软<strong>搞机</strong>与<strong>硬搞机</strong>!</p>
+<p> 举个例子，我们俗称的刷机，就是一种软搞机，也就是修改软件的搞机。这种搞机的好处是可以迁移，也就是说你可以很方便的在网上分享你的成果。</p>
+<p> 一般情况下，软搞机是不需要什么成本的，唯一的成本就是时间以及精力。所以一般的软搞机也是<strong>非商业性的</strong>。</p>
+<p> <img src="/fengimg/wlgxd.jpg" alt=""></p>
+<p>而改内存改电池一类的操作是硬搞机，也就是修改硬件的搞机。这种搞机的特点是对搞基者的技术要求更高，就算是给你全套材料和技术资料你也不一定能复现。一般情况下硬搞机是需要一些成本的。因为稍有不慎就会导致整个硬件不可逆的损坏，所以硬搞机的人相对较少，而且也需要大量时间和精力。 做这种搞机的人通常以盈利为目的，因为前期投入高，所以会的人较少。</p>
+<p>道理我都懂，现在我有一台三星S5,想改一下我的系统，怎么搞？要求不高，吃鸡不卡就行。</p>
+<p>搞机的作用没有那么大。它只能让原本很差的性能勉强能用，让原来勉强能用的货色变得稍微好一点。 搞机可以提高机器的下限，却没法提高机器的上限。上限取决于你硬件的性能。比如你再怎么优化也不可能让骁龙810 2600Mah的手机获得10个小时的亮屏，或者让骁龙210这种级别的手机流畅吃鸡。你这台三星S5已经是很早的手机了，如果你要流畅吃鸡的话，你需要更换一台手机。</p>
+<p>我有一台小米5，我想刷个系统，有什么注意事项吗？</p>
+<p>搞机之前请务必理性一些，千万不要脑子一热就刷机。刷完发现还不如原来的，耽误你的时间又浪费你的精力。所以你搞机之前请务必准备好各种应急预案，比如成砖怎么救，还有备份好你的资料 包括程序等。 这点很重要，因为大部分刷机过程都需要清除所有程序。也就是说，如果你无法确认的话那就提前准备好吧。</p>
+<p>woc，我成砖了，怎么办？</p>
+<p>这种情况务必不要慌张，请按照之前做好的应急预案去解决问题，如果你没做好应急预案的话那就不要怨天尤人，没有人强迫你。如果你真的没有做好应急预案的话，那么你要做的是休息一下，放平心态，然后去心平气和的找资料或者提问，记得不要相信<strong>奸商</strong>，也不要信论坛的什么qq付费救砖。大概率是骗子。</p>
+<p><img src="/fengimg/bdb.gif" alt=""></p>
+]]></content>
+      <categories>
+        <category>搞机</category>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>搞机</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
 </search>
