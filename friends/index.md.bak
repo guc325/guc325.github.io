@@ -29,13 +29,15 @@ links:
       
       
   - group: Jkkoi
+    icon: fas fa-user-tie
+    desc: 一条咸鱼
     items:
-    - name:  一番目   # 博客名
+    - name: Jkkoi   # 博客名
       avatar: https://jkkoi.top/images/custom/avatar.jpg # 头像链接
       url: https://jkkoi.top  # 博客链接
       backgroundColor: '#ffa2c5ff' # 卡片背景颜色
       textColor: '#fff'  # 卡片文字颜色
-      tags: ['@Jkkoi', '@川端康成']    # 标签
+      tags: ['@Jkkoi']    # 标签
       desc: 一条咸鱼
 
 
