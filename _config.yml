@@ -7,7 +7,7 @@ title: guc325's blog
 subtitle: ''
 description: ''
 keywords:
-author: JiJi
+author: guc325
 language: en
 timezone: ''
 
@@ -97,7 +97,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: butterfly
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
